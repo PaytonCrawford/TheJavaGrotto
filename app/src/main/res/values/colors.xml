@@ -10,7 +10,7 @@
     <color name="text_variant">#68473C</color>
     <color name="blue_primary">#039be5</color>
     <color name="blue_variant">#006db3</color>
-    <color name="background_colour">#DDAF7244</color>
+    <color name="background_colour">#e4c9b3</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

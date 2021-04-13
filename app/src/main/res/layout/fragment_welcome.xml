@@ -28,7 +28,7 @@
         android:background="@color/background_colour"
         android:cropToPadding="true"
         android:padding="40dp"
-        android:src="@drawable/recyclelogo" />
+        android:src="@drawable/javagrottolauncher" />
 
     <TextView
         android:id="@+id/welcomeText"
@@ -39,7 +39,7 @@
         android:fontFamily="@font/asap"
         android:text="@string/welcome_text"
         android:textAlignment="center"
-        android:textColor="@color/purple_700"
+        android:textColor="@color/text_primary"
         android:textSize="30sp" />
 
 </LinearLayout>
