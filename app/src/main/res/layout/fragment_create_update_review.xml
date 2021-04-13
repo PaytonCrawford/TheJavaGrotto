@@ -61,6 +61,7 @@
         android:fontFamily="@font/bad_script"
         android:text="Submit Review"
         android:textColor="@color/text_primary"
-        android:textSize="@dimen/title_two_size" />
+        android:textSize="@dimen/title_two_size"
+        android:textStyle="bold" />
 
 </GridLayout>
