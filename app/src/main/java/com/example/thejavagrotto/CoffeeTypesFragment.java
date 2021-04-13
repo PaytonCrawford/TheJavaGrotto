@@ -102,7 +102,7 @@ public class CoffeeTypesFragment extends Fragment {
         public Fragment createFragment(int position) {
             switch (position) {
                 case 0:
-                    return TypesFragment.newInstance("Arabica Coffee", R.drawable.latte, "This is the most common coffee bean type found in homes and stores around the world. It has a very sweetened taste," +
+                    return TypesFragment.newInstance("Arabica Coffee", R.drawable.arabica, "This is the most common coffee bean type found in homes and stores around the world. It has a very sweetened taste," +
                             " good for all kinds of brews including black coffee. Although It has a lower caffeine concentration than most other coffee types.");
                     //https://unsplash.com/photos/5rwIPczKI-8
                 case 1:
@@ -114,15 +114,16 @@ public class CoffeeTypesFragment extends Fragment {
                             " pours. They can be enjoyed on their own or used as a great mixture and starting point for other kinds of coffee.");
                     //https://unsplash.com/photos/KWZ-rg9o76A
                 case 3:
-                    return TypesFragment.newInstance("Iced Coffee", R.drawable.icedcoffee, "");
+                    return TypesFragment.newInstance("Iced Coffee", R.drawable.icedcoffee, "Typically Arabica brew that is chilled and served on top of ice. Iced coffee is also " +
+                            "enjoyed by most with a heavier amount of cream and sweetness, a very cool, refreshing summer beverage.");
                     //https://unsplash.com/photos/1e5V69AQjgA
                 case 4:
-                    return TypesFragment.newInstance("Nitro Brew", R.drawable.nitro, "Glass recycling is arguably the healthiest and least polluting type of recycling. T" +
-                            "his process breaks down glass into its raw and original form to later be reused in new items, products and even lowers costs of energy and clears out air pollution!");
+                    return TypesFragment.newInstance("Nitro Brew", R.drawable.nitro, "Nitro's are very tasty cold brew coffee's that are infused with nitrogen bubbles to create a chilled, frothy " +
+                            "beverage with a thick consistency.");
                     //https://unsplash.com/photos/N3bo4mkQEKM
                 case 5:
-                    return TypesFragment.newInstance("Galao", R.drawable.galao, "Glass recycling is arguably the healthiest and least polluting type of recycling. T" +
-                            "his process breaks down glass into its raw and original form to later be reused in new items, products and even lowers costs of energy and clears out air pollution!");
+                    return TypesFragment.newInstance("Galão", R.drawable.galao, "Galão is a hot Portuguese coffee with similarities to cappuccino's and latte's. It contains more frothy" +
+                            " milk, which turns it brighter in colour and gives it an increased amount of sweetness.");
                     //https://unsplash.com/photos/J-4ozdP9EQ0
                 default:
                     return TypesFragment.newInstance("Error.", 0, "No content found.");
