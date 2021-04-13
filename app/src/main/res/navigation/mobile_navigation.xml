@@ -38,4 +38,9 @@
         android:name="com.example.thejavagrotto.CreateUpdateReviewFragment"
         android:label="Leave A Review"
         tools:layout="@layout/fragment_create_update_review" />
+    <fragment
+        android:id="@+id/nav_credits"
+        android:name="com.example.thejavagrotto.CreditsFragment"
+        android:label="Credits"
+        tools:layout="@layout/fragment_credits" />
 </navigation>

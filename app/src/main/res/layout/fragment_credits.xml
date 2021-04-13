@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_colour"
+    android:orientation="vertical"
+    tools:context=".CreditsFragment">
+
+    <TextView
+        android:id="@+id/creditsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/background_colour"
+        android:fontFamily="@font/bad_script"
+        android:paddingTop="20dp"
+        android:text="@string/credits"
+        android:textAlignment="center"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/main_title_font"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/creditOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/asap"
+        android:text="https://unsplash.com/photos/5rwIPczKI-8"
+        android:textAlignment="center"
+        android:textSize="@dimen/description_size" />
+
+    <TextView
+        android:id="@+id/creditTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/asap"
+        android:text="https://unsplash.com/photos/nzyzAUsbV0M"
+        android:textAlignment="center"
+        android:textSize="@dimen/description_size" />
+
+    <TextView
+        android:id="@+id/creditThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/asap"
+        android:text="https://unsplash.com/photos/KWZ-rg9o76A"
+        android:textAlignment="center"
+        android:textSize="@dimen/description_size" />
+
+    <TextView
+        android:id="@+id/creditFour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/asap"
+        android:text="https://unsplash.com/photos/1e5V69AQjgA"
+        android:textAlignment="center"
+        android:textSize="@dimen/description_size" />
+
+    <TextView
+        android:id="@+id/creditFive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/asap"
+        android:text="https://unsplash.com/photos/N3bo4mkQEKM"
+        android:textAlignment="center"
+        android:textSize="@dimen/description_size" />
+
+    <TextView
+        android:id="@+id/creditSix"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/asap"
+        android:text="https://unsplash.com/photos/J-4ozdP9EQ0"
+        android:textAlignment="center"
+        android:textSize="@dimen/description_size" />
+
+</LinearLayout>
