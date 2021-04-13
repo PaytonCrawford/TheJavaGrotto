@@ -25,6 +25,11 @@ public class CustomReviewAdapter extends RecyclerView.Adapter<CustomReviewAdapte
     private ArrayList<ReviewItem> reviews;
     private Context context;
 
+    /**
+     * @author Payton Crawford
+     * Custom Adapter to be used when recyclerview items are loaded/used.
+     */
+
     public CustomReviewAdapter(ArrayList<ReviewItem> reviews, Context context){
         this.reviews = reviews;
         this.context = context;

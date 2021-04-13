@@ -95,6 +95,11 @@ public class CoffeeTypesFragment extends Fragment {
             super(fragmentActivity);
         }
 
+        /**
+         * @author Payton Crawford
+         * ViewPager elements.
+         */
+
         @NonNull
         @Override
         public Fragment createFragment(int position) {

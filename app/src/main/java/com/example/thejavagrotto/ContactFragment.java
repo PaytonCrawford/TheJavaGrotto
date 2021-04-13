@@ -57,6 +57,12 @@ public class ContactFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
+        /**
+         * @author Payton Crawford
+         * Call and email intents (With call permission.)
+         */
+
+
         Button callContactButton = view.findViewById(R.id.callContactButton);
         callContactButton.setOnClickListener(new View.OnClickListener() {
             @Override

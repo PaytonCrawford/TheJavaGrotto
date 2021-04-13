@@ -62,6 +62,11 @@ public class ShopsFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_shops, container, false);
 
+        /**
+         * @author Payton Crawford
+         * Web and call intent (With permission.)
+         */
+
         Button locateCafeButton = view.findViewById(R.id.locateShopButton);
         locateCafeButton.setOnClickListener(new View.OnClickListener() {
             @Override
