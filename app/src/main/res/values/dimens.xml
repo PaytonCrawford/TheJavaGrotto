@@ -7,4 +7,6 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="title_size">36sp</dimen>
     <dimen name="description_size">18sp</dimen>
+    <dimen name="title_two_size">24sp</dimen>
+    <dimen name="main_title_font">56sp</dimen>
 </resources>

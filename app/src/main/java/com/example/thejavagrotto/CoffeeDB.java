@@ -3,11 +3,9 @@ package com.example.thejavagrotto;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.thejavagrotto.pojo.ReviewItem;
@@ -47,6 +45,12 @@ public class CoffeeDB extends SQLiteOpenHelper {
 
     }
 
+    /**
+     * @author Payton Crawford
+     * CRUD For the newlu created database.
+     */
+
+    //Create Review
     public void addReview(ReviewItem reviewItem) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -56,6 +60,7 @@ public class CoffeeDB extends SQLiteOpenHelper {
         db.close();
     }
 
+    //Read Review
     public ReviewItem getReview(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         ReviewItem reviewItem = null;
@@ -88,15 +93,17 @@ public class CoffeeDB extends SQLiteOpenHelper {
         return reviewItem;
     }
 
+    //Update Review
     public int updateReview(ReviewItem reviewItem) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_TITLE, reviewItem.getReviewTitle());
         values.put(COLUMN_TEXT, reviewItem.getReviewText());
         return db.update(TABLE_REVIEWS, values, COLUMN_ID + "=?",
-                new String[]{(reviewItem.getReviewText())});
+                new String[]{(reviewItem.getReviewTitle())});
     }
 
+    //Delete Review
     public void deleteReview(int review) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_REVIEWS, COLUMN_ID + "=?", new String[]{String.valueOf(review)});

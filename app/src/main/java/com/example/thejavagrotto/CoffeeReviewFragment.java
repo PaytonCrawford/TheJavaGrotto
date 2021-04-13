@@ -2,18 +2,30 @@ package com.example.thejavagrotto;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link CoffeeReviewFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
+import com.example.thejavagrotto.pojo.ReviewItem;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+import static com.example.thejavagrotto.MainActivity.fab;
+
 public class CoffeeReviewFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -61,8 +73,76 @@ public class CoffeeReviewFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_coffee_review, container, false);
 
+        fab.setImageResource(R.drawable.ic_baseline_post_add_24);
+        fab.show();
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putInt(CreateUpdateReviewFragment.ACTION_TYPE, CreateUpdateReviewFragment.CREATE_REVIEW);
+                Navigation.findNavController(view).navigate(R.id.action_nav_review_to_createUpdateReviewFragment, bundle);
+            }
+        });
 
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        CoffeeDB coffeeDB = new CoffeeDB(getContext());
+        ArrayList<ReviewItem> reviewItems = coffeeDB.getAllReviews();
+        coffeeDB.close();
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        CustomStepsRecyclerViewAdapter customStepsRecyclerViewAdapter = new CustomStepsRecyclerViewAdapter(dataItems);
+        recyclerView.setAdapter(customStepsRecyclerViewAdapter);
 
         return view;
     }
+
+    public class CustomReviewRecyclerViewAdapter extends RecyclerView.Adapter {
+
+        private ArrayList<ReviewItem> reviewItems;
+
+        public CustomReviewRecyclerViewAdapter(ArrayList<ReviewItem> reviewItems) {
+            this.reviewItems = reviewItems;
+        }
+
+        @NonNull
+        @Override
+        public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, null);
+            CustomViewHolder customViewHolder = new CustomViewHolder(view);
+            return customViewHolder;
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+            
+        }
+
+        @Override
+        public int getItemCount() {
+            return 0;
+        }
+    }
+
+    class CustomViewHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener, View.OnClickListener {
+
+        protected TextView reviewTitle;
+        protected TextView reviewText;
+        protected TextView web;
+
+        public CustomViewHolder(@NonNull View itemView) {
+            super(itemView);
+            this.reviewTitle = itemView.findViewById(R.id.)
+        }
+
+        @Override
+        public void onClick(View view) {
+
+        }
+
+        @Override
+        public boolean onLongClick(View view) {
+            return false;
+        }
+    }
+
 }

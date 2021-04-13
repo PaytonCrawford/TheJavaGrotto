@@ -5,6 +5,11 @@ import android.os.Parcelable;
 
 public class ReviewItem implements Parcelable {
 
+    /**
+     * @author Payton Crawford
+     * POJO Item to be used in the database.
+     */
+
     private int reviewID;
     private String reviewTitle;
     private String reviewText;

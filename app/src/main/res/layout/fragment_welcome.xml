@@ -11,12 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/background_colour"
-        android:fontFamily="@font/asap"
+        android:fontFamily="@font/bad_script"
         android:paddingTop="20dp"
         android:text="@string/the_java_grotto"
         android:textAlignment="center"
         android:textColor="@color/text_primary"
-        android:textSize="48sp"
+        android:textSize="@dimen/main_title_font"
         android:textStyle="bold" />
 
     <ImageView
@@ -36,10 +36,11 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@color/background_colour"
-        android:fontFamily="@font/asap"
+        android:fontFamily="@font/bad_script"
         android:text="@string/welcome_text"
         android:textAlignment="center"
         android:textColor="@color/text_primary"
-        android:textSize="30sp" />
+        android:textSize="@dimen/title_size"
+        android:textStyle="bold" />
 
 </LinearLayout>

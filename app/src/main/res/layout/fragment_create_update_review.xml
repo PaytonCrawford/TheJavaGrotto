@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_colour"
+    android:columnCount="2"
+    android:useDefaultMargins="true"
+    tools:context=".CreateUpdateReviewFragment">
+
+    <TextView
+        android:id="@+id/newBrew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bad_script"
+        android:text="New Brew:"
+        android:textSize="@dimen/title_two_size"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editCoffeeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Coffee Type"
+        android:textColor="@color/text_primary" />
+
+    <TextView
+        android:id="@+id/newCoffeeReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bad_script"
+        android:text="Coffee Review:"
+        android:textSize="@dimen/title_two_size"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Review Body"
+        android:textColor="@color/text_primary" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="294dp"
+        android:layout_columnSpan="2"
+        android:src="@drawable/espresso" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="2"
+        android:backgroundTint="@color/brown1"
+        android:fontFamily="@font/bad_script"
+        android:text="Submit Review"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/title_two_size" />
+
+</GridLayout>
