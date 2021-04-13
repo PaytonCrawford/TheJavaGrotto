@@ -76,7 +76,7 @@ public class CoffeeTypesFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_coffee_types, container, false);
         typesViewPagerTwo = view.findViewById(R.id.coffeeTypesViewPager);
-        typesViewPagerTwo.setAdapter(new CustomViewPager2Adapter(getActivity()));
+        typesViewPagerTwo.setAdapter(new CustomTypeViewPager2Adapter(getActivity()));
         //typesViewPagerTwo.setPageTransformer(new ZoomOutPageTransformer());
         return view;
     }
@@ -86,14 +86,12 @@ public class CoffeeTypesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         TabLayout tabLayout = view.findViewById(R.id.tabLayout);
-        new TabLayoutMediator(tabLayout,
-                typesViewPagerTwo,
-                (tab, position) -> tab.setText("Type " + (position + 1))).attach();
+        new TabLayoutMediator(tabLayout, typesViewPagerTwo, (tab, position) -> tab.setText("Cup " + (position + 1))).attach();
         }
 
-    private class CustomViewPager2Adapter extends FragmentStateAdapter {
+    private class CustomTypeViewPager2Adapter extends FragmentStateAdapter {
 
-        public CustomViewPager2Adapter(@NonNull FragmentActivity fragmentActivity) {
+        public CustomTypeViewPager2Adapter(@NonNull FragmentActivity fragmentActivity) {
             super(fragmentActivity);
         }
 

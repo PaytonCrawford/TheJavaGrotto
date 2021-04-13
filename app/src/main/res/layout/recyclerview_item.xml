@@ -13,64 +13,48 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/blue_variant">
+        android:background="@color/text_variant">
 
         <TextView
-            android:id="@+id/stepTitle"
+            android:id="@+id/reviewTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:fontFamily="@font/asap"
+            android:fontFamily="@font/bad_script"
             android:text="TextView"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@android:color/darker_gray"
             android:textSize="@dimen/title_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/stepDescription"
+            android:id="@+id/reviewDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="4"
             android:fontFamily="@font/asap"
             android:text="TextView"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@android:color/darker_gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/stepTitle" />
-
-        <ImageView
-            android:id="@+id/stepImage"
-            android:layout_width="300dp"
-            android:layout_height="250dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="18"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            android:paddingLeft="30dp"
-            android:paddingTop="30dp"
-            android:paddingRight="30dp"
-            android:paddingBottom="30dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/stepDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/reviewTitle" />
 
         <ImageView
             android:id="@+id/web"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/custom_selector"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
             android:padding="5dp"
-            android:src="@drawable/ic_baseline_post_add_24"
+            android:src="@drawable/ic_baseline_free_breakfast_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/stepImage"
-            app:layout_constraintTop_toBottomOf="@+id/stepDescription" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reviewDescription" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

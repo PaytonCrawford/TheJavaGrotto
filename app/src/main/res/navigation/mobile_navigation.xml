@@ -36,6 +36,6 @@
     <fragment
         android:id="@+id/createUpdateReviewFragment"
         android:name="com.example.thejavagrotto.CreateUpdateReviewFragment"
-        android:label="fragment_create_update_review"
+        android:label="Leave A Review"
         tools:layout="@layout/fragment_create_update_review" />
 </navigation>
