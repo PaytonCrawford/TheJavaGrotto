@@ -12,6 +12,7 @@
         android:id="@+id/contactTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:background="@color/background_colour"
         android:fontFamily="@font/bad_script"
         android:paddingTop="20dp"
@@ -22,7 +23,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/callContactButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -34,7 +35,7 @@
         android:textColor="@android:color/darker_gray" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/emailContactButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -45,22 +46,10 @@
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:layout_weight="1"
-        android:backgroundTint="@color/brown1"
-        android:padding="15dp"
-        android:text="@string/text"
-        android:textAlignment="center"
-        android:textColor="@android:color/darker_gray" />
-
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/coffeeImage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="22dp"
         android:layout_weight="16"
         android:src="@drawable/nitro" />
 

@@ -1,26 +1,31 @@
 package com.example.thejavagrotto;
 
+import android.Manifest;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ContactFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.google.android.material.snackbar.Snackbar;
+
 public class ContactFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+    public static final int PERMISSION_CALL_PHONE = 0;
+
     private String mParam1;
     private String mParam2;
 
@@ -28,15 +33,6 @@ public class ContactFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ContactFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static ContactFragment newInstance(String param1, String param2) {
         ContactFragment fragment = new ContactFragment();
         Bundle args = new Bundle();
@@ -59,6 +55,59 @@ public class ContactFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contact, container, false);
+        View view = inflater.inflate(R.layout.fragment_contact, container, false);
+
+        Button callContactButton = view.findViewById(R.id.callContactButton);
+        callContactButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.CALL_PHONE)) {
+                        final AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                        alertDialog.setTitle("Phone Permission");
+                        alertDialog.setMessage("We need access to your phone to make a call to the local cafe.");
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ACCEPT", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                alertDialog.dismiss();
+                                ActivityCompat.requestPermissions(getActivity(), new String[] {
+                                        Manifest.permission.CALL_PHONE}, PERMISSION_CALL_PHONE);
+                            }
+                        });
+                        alertDialog.show();
+                    }
+                    else {
+                        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CALL_PHONE}, PERMISSION_CALL_PHONE);
+                    }
+                } else {
+                    Uri num = Uri.parse("tel:3848244742");
+                    Intent intent = new Intent(Intent.ACTION_DIAL, num);
+                    if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                        startActivity(intent);
+                    } else {
+                        Snackbar.make(requireView(), "Action invalid.", Snackbar.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
+
+        Button emailContactButton = view.findViewById(R.id.emailContactButton);
+        emailContactButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                String[] emailAddresses = {"testingemail816@gmail.com"};
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL, emailAddresses);
+                intent.putExtra(Intent.EXTRA_TEXT, "I was wondering about my local coffee shops, I have questions regarding...");
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null ) {
+                    startActivity(intent);
+                } else {
+                    Snackbar.make(requireView(), "Action invalid.", Snackbar.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        return view;
     }
 }
