@@ -26,6 +26,9 @@ Things you may need to get started using this project:
   - GitHub Account
   - AVD Manager With Android Emulators for Pixel 2(API Level 23 or Higher)
   - Android Studio Version 4.1 or later
+    ![latte](https://user-images.githubusercontent.com/72219666/114596979-3d0c3080-9c5e-11eb-9653-50d72aac0a52.png)
+    ![example](https://user-images.githubusercontent.com/72219666/114597149-72b11980-9c5e-11eb-9197-8ef512e4f42c.png)
+
   
 ## Steps
 
