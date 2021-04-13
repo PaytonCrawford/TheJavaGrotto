@@ -5,16 +5,24 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:id="@+id/nav_welcome"
+            android:icon="@drawable/ic_baseline_emoji_people_24"
+            android:title="Welcome" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_types"
+            android:icon="@drawable/ic_baseline_free_breakfast_24"
+            android:title="Coffee Types" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_shops"
+            android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+            android:title="Coffee Shops" />
+        <item
+            android:id="@+id/nav_review"
+            android:icon="@drawable/ic_baseline_mark_chat_read_24"
+            android:title="Leave A Review" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_baseline_contact_page_24"
+            android:title="Contact Us" />
     </group>
 </menu>

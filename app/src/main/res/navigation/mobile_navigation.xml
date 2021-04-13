@@ -7,31 +7,26 @@
     <fragment
         android:id="@+id/nav_contact"
         android:name="com.example.thejavagrotto.ContactFragment"
-        android:label="Contact"
+        android:label="Contact Us"
         tools:layout="@layout/fragment_contact" />
-    <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.thejavagrotto.HomeFragment"
-        android:label="Home"
-        tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/nav_review"
         android:name="com.example.thejavagrotto.CoffeeReviewFragment"
-        android:label="Review"
+        android:label="Leave A Review"
         tools:layout="@layout/fragment_coffee_review" />
     <fragment
         android:id="@+id/nav_types"
         android:name="com.example.thejavagrotto.CoffeeTypesFragment"
-        android:label="Types"
+        android:label="Coffee Types"
         tools:layout="@layout/fragment_coffee_types" />
     <fragment
         android:id="@+id/nav_shops"
         android:name="com.example.thejavagrotto.ShopsFragment"
-        android:label="Nearby Shops and Restaurants"
+        android:label="Coffee Shops"
         tools:layout="@layout/fragment_shops" />
     <fragment
         android:id="@+id/nav_welcome"
         android:name="com.example.thejavagrotto.WelcomeFragment"
-        android:label="fragment_welcome"
+        android:label="@string/the_java_grotto"
         tools:layout="@layout/fragment_welcome" />
 </navigation>
